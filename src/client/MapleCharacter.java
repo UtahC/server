@@ -2713,6 +2713,8 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
             getEventInstance().playerKilled(this);
         }
         dispelSkill(0);
+        cancelEffectFromBuffStat(MapleBuffStat.MAXHP);
+        cancelEffectFromBuffStat(MapleBuffStat.MAXMP);
         cancelEffectFromBuffStat(MapleBuffStat.MORPH);
         cancelEffectFromBuffStat(MapleBuffStat.MONSTER_RIDING);
         cancelEffectFromBuffStat(MapleBuffStat.SUMMON);
